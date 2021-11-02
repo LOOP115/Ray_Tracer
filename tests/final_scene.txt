@@ -1,0 +1,34 @@
+
+Material "BlackMat" Diffuse (.2, .2, .2) 1
+Material "WhiteMat" Diffuse (.8, .8, .8) 1
+Material "MirrorMat" Reflective (1, 1, 1) 1
+Material "GlassPure" Refractive (0, 0, 0) 1.4
+Material "GlassMat" Refractive (0.5, 0.5, 1) 1.4
+Material "GlossyMat" Glossy (0.85, 0.85, 0.85) 1
+
+PointLight "LeftLight" (-0.9, 0, 0.5) (.5, .5, .5)
+PointLight "RightLight" (0.9, 0, 0.5) (.5, .5, .5)
+PointLight "FloorLight" (0, -0.9, 0.5) (0.75, 0.25, 0.25)
+PointLight "RoofLight" (0, 0.9, 0.5) (0.25, 0.25, 0.75)
+
+Sphere "RightSphere" (0.8, -0.3, 0) 0.15 "GlassPure"
+Sphere "LeftSphere" (-0.8, 0.3, 0) 0.15 "GlassMat"
+Sphere "RoofSphere" (0, 0.8, 0) 0.15 "MirrorMat"
+Triangle "FloorTriangle" (-0.2, -0.8, -0.2) (0, -0.8, 0.2) (0.2, -0.8, -0.2) "GlossyMat"
+
+
+Plane "Floor" (0, -1, 0) (0, 1, 0) "WhiteMat"
+Plane "Roof" (0, 1, 0) (0, -1, 0) "WhiteMat"
+
+Triangle "LeftWallA" (-1, -1, 0) (-1, 1, 0) (-1, 1, 1) "WhiteMat"
+Triangle "LeftWallB" (-1, -1, 0) (-1, 1, 1) (-1, -1, 1)  "BlackMat"
+
+Triangle "RightWallA" (1, 1, 0) (1, -1, 0) (1, 1, 1) "WhiteMat"
+Triangle "RightWallB" (1, 1, 1) (1, -1, 0) (1, -1, 1)  "BlackMat"
+
+Triangle "RearWallA" (-1, 1, 0) (-1, -1, 0) (1, 1, 0) "MirrorMat"
+Triangle "RearWallB" (1, 1, 0) (-1, -1, 0) (1, -1, 0) "MirrorMat"
+
+Triangle "FarWallA" (-1, -1, 1) (-1, 1, 1) (1, 1, 1) "MirrorMat"
+Triangle "FarWallB" (-1, -1, 1) (1, 1, 1) (1, -1, 1) "MirrorMat"
+
