@@ -1,7 +1,4 @@
 # COMP30019 Assignment 1 - Ray Tracer
-**Student Number:** 1118749 \
-**Username:** jiahchen4 \
-**Email:** jiahchen4@student.unimelb.edu.au
 
 ## Completed stages
 
